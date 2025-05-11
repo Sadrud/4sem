@@ -26,10 +26,11 @@
    cmake ..
    make
 3. Запустите проект:
-   Из одного терминала:
+
+Из одного терминала:
    ```bash
    ./Server/GeometryServer
-   
+   ```
 Из другого терминала:
    ```bash
    ./Client/GeometryClient
