@@ -21,12 +21,15 @@
    git clone https://github.com/Sadrud/4sem.git
    cd 4sem
 2. Соберите проект с помощью CMake:
-   '''bash
+   ```bash
    cd build
    cmake ..
    make
 3. Запустите проект:
    Из одного терминала:
+   ```bash
    ./Server/GeometryServer
-   Из другого терминала:
+   
+Из другого терминала:
+   ```bash
    ./Client/GeometryClient
