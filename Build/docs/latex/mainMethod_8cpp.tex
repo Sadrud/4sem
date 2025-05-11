@@ -1,0 +1,172 @@
+\hypertarget{mainMethod_8cpp}{}\doxysection{Файл Methods/main\+Method.cpp}
+\label{mainMethod_8cpp}\index{Methods/mainMethod.cpp@{Methods/mainMethod.cpp}}
+
+
+Основной файл, в котором содержится алгоритм для поиска выпуклой оболочки.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Includes/\+Polygon.\+cpp\char`\"{}}\newline
+Граф включаемых заголовочных файлов для main\+Method.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{mainMethod_8cpp__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{mainMethod_8cpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{mainMethod_8cpp_a43f3d39ca8995bf2359f1ad545671404}{print\+Vector}} (std\+::string \&folder, std\+::string \&file, const std\+::vector$<$ T $>$ \&g, int size)
+\begin{DoxyCompactList}\small\item\em Печать вектора в файл В начале файла печатается количество точек изначально, затем печаются все точки и только в конце печатаются точки, образующие выпуклую оболочку. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mainMethod_8cpp_a4fa5afc24d0c595b180570d681c6885f}{supporting\+Line}} (Point \&s, Polygon $\ast$p, int side)
+\begin{DoxyCompactList}\small\item\em Ключевой метод для работы алгоритма. Данная функция определяет положение точки относительно соседних с помощью метода classify. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mainMethod_8cpp_a70ad8126a1ff675a5005f0debb3a5a99}{left\+To\+Right\+Cmp}} (Point $\ast$a, Point $\ast$b)
+\begin{DoxyCompactList}\small\item\em Компаратор дл точек Сравнение точек происходит по их положению на горизонтальной оси, а затем уже по вертикальной (если по горизонтальной одинаковы) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{mainMethod_8cpp_a05b28f115a8cdd1c9a3d97397aa4faf3}{position\+Of\+Smallest}} (T $\ast$arr\mbox{[}$\,$\mbox{]}, int n, int($\ast$cmp)(T $\ast$, T $\ast$))
+\begin{DoxyCompactList}\small\item\em Вспомагательный метод для сортировки для поиска индекса минимального элемента в имеющемся массиве. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{mainMethod_8cpp_af8957352e4ec2b9742ffcb212bb6cf65}{selection\+Sort}} (T $\ast$arr\mbox{[}$\,$\mbox{]}, int n, int($\ast$cmp)(T $\ast$, T $\ast$))
+\begin{DoxyCompactList}\small\item\em Сортировка выбором \end{DoxyCompactList}\item 
+Polygon $\ast$ \mbox{\hyperlink{mainMethod_8cpp_aafe589ef5d186909f5ab337fdbd15eab}{insertion\+Hull2}} (Point pts\mbox{[}$\,$\mbox{]}, int n)
+\begin{DoxyCompactList}\small\item\em Основной метод для поиска выпуклой оболочки множества точек. Функция получает массив точек плоскости, сортирует из по положению на горизонтальной оси. Берется каждая точка из массива и вычисляют ее положение с помощью вмпомагательных функций. Подходящие точки добавляются в многоугольник. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Основной файл, в котором содержится алгоритм для поиска выпуклой оболочки. 
+
+В этом файле также содержатся вспомагательные методы для работы основного алгоритма. Есть метод для печати получаемых данных с сервера в файл. 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{mainMethod_8cpp_aafe589ef5d186909f5ab337fdbd15eab}\label{mainMethod_8cpp_aafe589ef5d186909f5ab337fdbd15eab}} 
+\index{mainMethod.cpp@{mainMethod.cpp}!insertionHull2@{insertionHull2}}
+\index{insertionHull2@{insertionHull2}!mainMethod.cpp@{mainMethod.cpp}}
+\doxysubsubsection{\texorpdfstring{insertionHull2()}{insertionHull2()}}
+{\footnotesize\ttfamily Polygon$\ast$ insertion\+Hull2 (\begin{DoxyParamCaption}\item[{Point}]{pts\mbox{[}$\,$\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Основной метод для поиска выпуклой оболочки множества точек. Функция получает массив точек плоскости, сортирует из по положению на горизонтальной оси. Берется каждая точка из массива и вычисляют ее положение с помощью вмпомагательных функций. Подходящие точки добавляются в многоугольник. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em pts\mbox{[}$\,$\mbox{]},n} & Указатель на массив точек, количество точек. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Многоугольник, являющийся выпуклой оболочкой множество точек. 
+\end{DoxyReturn}
+
+
+См. определение в файле main\+Method.\+cpp строка 108
+
+\mbox{\Hypertarget{mainMethod_8cpp_a70ad8126a1ff675a5005f0debb3a5a99}\label{mainMethod_8cpp_a70ad8126a1ff675a5005f0debb3a5a99}} 
+\index{mainMethod.cpp@{mainMethod.cpp}!leftToRightCmp@{leftToRightCmp}}
+\index{leftToRightCmp@{leftToRightCmp}!mainMethod.cpp@{mainMethod.cpp}}
+\doxysubsubsection{\texorpdfstring{leftToRightCmp()}{leftToRightCmp()}}
+{\footnotesize\ttfamily int left\+To\+Right\+Cmp (\begin{DoxyParamCaption}\item[{Point $\ast$}]{a,  }\item[{Point $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Компаратор дл точек Сравнение точек происходит по их положению на горизонтальной оси, а затем уже по вертикальной (если по горизонтальной одинаковы) 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em a,b} & Указатели на две точки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+-\/1 если первая точка левее второй (если одинаковы по положению на горизонтальной оси, то если первая ниже второй), 1 в противном случае, 0 если это одна и та же точка. 
+\end{DoxyReturn}
+
+
+См. определение в файле main\+Method.\+cpp строка 63
+
+\mbox{\Hypertarget{mainMethod_8cpp_a05b28f115a8cdd1c9a3d97397aa4faf3}\label{mainMethod_8cpp_a05b28f115a8cdd1c9a3d97397aa4faf3}} 
+\index{mainMethod.cpp@{mainMethod.cpp}!positionOfSmallest@{positionOfSmallest}}
+\index{positionOfSmallest@{positionOfSmallest}!mainMethod.cpp@{mainMethod.cpp}}
+\doxysubsubsection{\texorpdfstring{positionOfSmallest()}{positionOfSmallest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int position\+Of\+Smallest (\begin{DoxyParamCaption}\item[{T $\ast$}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{n,  }\item[{int($\ast$)(T $\ast$, T $\ast$)}]{cmp }\end{DoxyParamCaption})}
+
+
+
+Вспомагательный метод для сортировки для поиска индекса минимального элемента в имеющемся массиве. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em arr\mbox{[}$\,$\mbox{]},n,cmp} & Указатель на начало массива, длина массива, компаратор \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Позиция наименьшего элемента в массиве 
+\end{DoxyReturn}
+
+
+См. определение в файле main\+Method.\+cpp строка 75
+
+\mbox{\Hypertarget{mainMethod_8cpp_a43f3d39ca8995bf2359f1ad545671404}\label{mainMethod_8cpp_a43f3d39ca8995bf2359f1ad545671404}} 
+\index{mainMethod.cpp@{mainMethod.cpp}!printVector@{printVector}}
+\index{printVector@{printVector}!mainMethod.cpp@{mainMethod.cpp}}
+\doxysubsubsection{\texorpdfstring{printVector()}{printVector()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void print\+Vector (\begin{DoxyParamCaption}\item[{std\+::string \&}]{folder,  }\item[{std\+::string \&}]{file,  }\item[{const std\+::vector$<$ T $>$ \&}]{g,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Печать вектора в файл В начале файла печатается количество точек изначально, затем печаются все точки и только в конце печатаются точки, образующие выпуклую оболочку. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em folder,file,g,size} & Название папки, в которой хранятся файлы, название для файла, в котором буду хранится точки, вектор точек и размер вектора точек. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле main\+Method.\+cpp строка 20
+
+\mbox{\Hypertarget{mainMethod_8cpp_af8957352e4ec2b9742ffcb212bb6cf65}\label{mainMethod_8cpp_af8957352e4ec2b9742ffcb212bb6cf65}} 
+\index{mainMethod.cpp@{mainMethod.cpp}!selectionSort@{selectionSort}}
+\index{selectionSort@{selectionSort}!mainMethod.cpp@{mainMethod.cpp}}
+\doxysubsubsection{\texorpdfstring{selectionSort()}{selectionSort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void selection\+Sort (\begin{DoxyParamCaption}\item[{T $\ast$}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{n,  }\item[{int($\ast$)(T $\ast$, T $\ast$)}]{cmp }\end{DoxyParamCaption})}
+
+
+
+Сортировка выбором 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em arr\mbox{[}$\,$\mbox{]},n,cmp} & Указатель на начало массива, длина массива, компаратор \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле main\+Method.\+cpp строка 92
+
+\mbox{\Hypertarget{mainMethod_8cpp_a4fa5afc24d0c595b180570d681c6885f}\label{mainMethod_8cpp_a4fa5afc24d0c595b180570d681c6885f}} 
+\index{mainMethod.cpp@{mainMethod.cpp}!supportingLine@{supportingLine}}
+\index{supportingLine@{supportingLine}!mainMethod.cpp@{mainMethod.cpp}}
+\doxysubsubsection{\texorpdfstring{supportingLine()}{supportingLine()}}
+{\footnotesize\ttfamily void supporting\+Line (\begin{DoxyParamCaption}\item[{Point \&}]{s,  }\item[{Polygon $\ast$}]{p,  }\item[{int}]{side }\end{DoxyParamCaption})}
+
+
+
+Ключевой метод для работы алгоритма. Данная функция определяет положение точки относительно соседних с помощью метода classify. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em s,p,side} & Точка из вектора точек, многоульник, в который собираеются точки выпуклой оболочки и направление поворота около точки \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле main\+Method.\+cpp строка 43
+

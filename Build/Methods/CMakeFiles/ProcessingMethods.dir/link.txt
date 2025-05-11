@@ -1,0 +1,2 @@
+/usr/bin/ar qc libProcessingMethods.a CMakeFiles/ProcessingMethods.dir/mainMethod.cpp.o
+/usr/bin/ranlib libProcessingMethods.a

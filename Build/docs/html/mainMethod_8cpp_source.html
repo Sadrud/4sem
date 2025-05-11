@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Geometry: Исходный файл Methods/mainMethod.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Geometry
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_2b9c4241c42dfb85a056344669c49e72.html">Methods</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">mainMethod.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mainMethod_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../Includes/Polygon.cpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="mainMethod_8cpp.html#a43f3d39ca8995bf2359f1ad545671404">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mainMethod_8cpp.html#a43f3d39ca8995bf2359f1ad545671404">printVector</a> (std::string&amp; folder, std::string&amp; file, <span class="keyword">const</span> std::vector&lt;T&gt;&amp; g, <span class="keywordtype">int</span> size) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    mkdir(folder.c_str());</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    mkdir(folder.c_str(), 0777);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::string filename = folder + <span class="charliteral">&#39;/&#39;</span> + file + <span class="stringliteral">&quot;.txt&quot;</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::ofstream out(filename);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (size != 0)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        out &lt;&lt; size &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; val : g)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        out &lt;&lt; val.x &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; val.y &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    out.close();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="mainMethod_8cpp.html#a4fa5afc24d0c595b180570d681c6885f">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mainMethod_8cpp.html#a4fa5afc24d0c595b180570d681c6885f">supportingLine</a>(Point &amp;s, Polygon *p, <span class="keywordtype">int</span> side){</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> rotation = (side == <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Position::LEFT)) ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Turn::CLOCKWISE) : <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Turn::COUNTER_CLOCKWISE);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Vertex *a = p-&gt;v();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    Vertex *b = p-&gt;neighbor(rotation);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> c = b-&gt;classify(s, *a);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">while</span> ((c == side) || (c == <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Position::BEHIND)) || (c == <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Position::BETWEEN))) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        p-&gt;advance(rotation);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        a = p-&gt;v();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        b = p-&gt;neighbor(rotation);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        c = b-&gt;classify(s, *a);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="mainMethod_8cpp.html#a70ad8126a1ff675a5005f0debb3a5a99">   63</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="mainMethod_8cpp.html#a70ad8126a1ff675a5005f0debb3a5a99">leftToRightCmp</a>(Point* a, Point* b) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (a-&gt;x &lt; b-&gt;x || (abs(a-&gt;x, b-&gt;x) &lt;= epsilon &amp;&amp; a-&gt;y &lt; b-&gt;y)) <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (a-&gt;x &gt; b-&gt;x || (abs(a-&gt;x, b-&gt;x) &lt;= epsilon &amp;&amp; a-&gt;y &gt; b-&gt;y)) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="mainMethod_8cpp.html#a05b28f115a8cdd1c9a3d97397aa4faf3">   75</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="mainMethod_8cpp.html#a05b28f115a8cdd1c9a3d97397aa4faf3">positionOfSmallest</a> (T* arr[], <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> (*cmp)(T*, T*)) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> small = 0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    T* smallest = arr[0];</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span> (cmp(smallest, arr[i]) &gt; 0) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            smallest = arr[i];</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            small = i;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span> small;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="mainMethod_8cpp.html#af8957352e4ec2b9742ffcb212bb6cf65">   92</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mainMethod_8cpp.html#af8957352e4ec2b9742ffcb212bb6cf65">selectionSort</a>(T* arr[], <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> (*cmp)(T*, T*)) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (n &gt; 0) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">int</span> i = <a class="code" href="mainMethod_8cpp.html#a05b28f115a8cdd1c9a3d97397aa4faf3">positionOfSmallest</a> (arr, n, cmp);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        std::swap(arr[0], arr[i]);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="mainMethod_8cpp.html#af8957352e4ec2b9742ffcb212bb6cf65">selectionSort</a> (arr+1, n-1, cmp);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="mainMethod_8cpp.html#aafe589ef5d186909f5ab337fdbd15eab">  108</a></span>&#160;Polygon *<a class="code" href="mainMethod_8cpp.html#aafe589ef5d186909f5ab337fdbd15eab">insertionHull2</a>(Point pts[], <span class="keywordtype">int</span> n) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    Point **s = <span class="keyword">new</span> Point*[n];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i++) s[i] = &amp;pts[i];</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="mainMethod_8cpp.html#af8957352e4ec2b9742ffcb212bb6cf65">selectionSort</a>(s, n, <a class="code" href="mainMethod_8cpp.html#a70ad8126a1ff675a5005f0debb3a5a99">leftToRightCmp</a>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    Polygon *p = <span class="keyword">new</span> Polygon;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    p-&gt;insert(<span class="keyword">new</span> Vertex(*s[0]));</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; n; i++) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> (*s[i] == *s[i-1]) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="mainMethod_8cpp.html#a4fa5afc24d0c595b180570d681c6885f">supportingLine</a>(*s[i], p, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Position::LEFT));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        Vertex *l = p-&gt;v();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="mainMethod_8cpp.html#a4fa5afc24d0c595b180570d681c6885f">supportingLine</a>(*s[i], p, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Position::RIGHT));</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">delete</span> p-&gt;split(l);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        p-&gt;insert(<span class="keyword">new</span> Vertex(*s[i]));</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">delete</span> [] s;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> p;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="ttc" id="amainMethod_8cpp_html_a05b28f115a8cdd1c9a3d97397aa4faf3"><div class="ttname"><a href="mainMethod_8cpp.html#a05b28f115a8cdd1c9a3d97397aa4faf3">positionOfSmallest</a></div><div class="ttdeci">int positionOfSmallest(T *arr[], int n, int(*cmp)(T *, T *))</div><div class="ttdoc">Вспомагательный метод для сортировки для поиска индекса минимального элемента в имеющемся массиве.</div><div class="ttdef"><b>Definition:</b> <a href="mainMethod_8cpp_source.html#l00075">mainMethod.cpp:75</a></div></div>
+<div class="ttc" id="amainMethod_8cpp_html_a43f3d39ca8995bf2359f1ad545671404"><div class="ttname"><a href="mainMethod_8cpp.html#a43f3d39ca8995bf2359f1ad545671404">printVector</a></div><div class="ttdeci">void printVector(std::string &amp;folder, std::string &amp;file, const std::vector&lt; T &gt; &amp;g, int size)</div><div class="ttdoc">Печать вектора в файл В начале файла печатается количество точек изначально, затем печаются все точки...</div><div class="ttdef"><b>Definition:</b> <a href="mainMethod_8cpp_source.html#l00020">mainMethod.cpp:20</a></div></div>
+<div class="ttc" id="amainMethod_8cpp_html_a4fa5afc24d0c595b180570d681c6885f"><div class="ttname"><a href="mainMethod_8cpp.html#a4fa5afc24d0c595b180570d681c6885f">supportingLine</a></div><div class="ttdeci">void supportingLine(Point &amp;s, Polygon *p, int side)</div><div class="ttdoc">Ключевой метод для работы алгоритма. Данная функция определяет положение точки относительно соседних ...</div><div class="ttdef"><b>Definition:</b> <a href="mainMethod_8cpp_source.html#l00043">mainMethod.cpp:43</a></div></div>
+<div class="ttc" id="amainMethod_8cpp_html_a70ad8126a1ff675a5005f0debb3a5a99"><div class="ttname"><a href="mainMethod_8cpp.html#a70ad8126a1ff675a5005f0debb3a5a99">leftToRightCmp</a></div><div class="ttdeci">int leftToRightCmp(Point *a, Point *b)</div><div class="ttdoc">Компаратор дл точек Сравнение точек происходит по их положению на горизонтальной оси,...</div><div class="ttdef"><b>Definition:</b> <a href="mainMethod_8cpp_source.html#l00063">mainMethod.cpp:63</a></div></div>
+<div class="ttc" id="amainMethod_8cpp_html_aafe589ef5d186909f5ab337fdbd15eab"><div class="ttname"><a href="mainMethod_8cpp.html#aafe589ef5d186909f5ab337fdbd15eab">insertionHull2</a></div><div class="ttdeci">Polygon * insertionHull2(Point pts[], int n)</div><div class="ttdoc">Основной метод для поиска выпуклой оболочки множества точек. Функция получает массив точек плоскости,...</div><div class="ttdef"><b>Definition:</b> <a href="mainMethod_8cpp_source.html#l00108">mainMethod.cpp:108</a></div></div>
+<div class="ttc" id="amainMethod_8cpp_html_af8957352e4ec2b9742ffcb212bb6cf65"><div class="ttname"><a href="mainMethod_8cpp.html#af8957352e4ec2b9742ffcb212bb6cf65">selectionSort</a></div><div class="ttdeci">void selectionSort(T *arr[], int n, int(*cmp)(T *, T *))</div><div class="ttdoc">Сортировка выбором</div><div class="ttdef"><b>Definition:</b> <a href="mainMethod_8cpp_source.html#l00092">mainMethod.cpp:92</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

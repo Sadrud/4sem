@@ -1,0 +1,2 @@
+/usr/bin/ar qc libProcessingTests.a CMakeFiles/ProcessingTests.dir/tests.cpp.o
+/usr/bin/ranlib libProcessingTests.a

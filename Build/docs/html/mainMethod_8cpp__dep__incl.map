@@ -1,0 +1,6 @@
+<map id="Methods/mainMethod.cpp" name="Methods/mainMethod.cpp">
+<area shape="rect" id="node1" title="Основной файл, в котором содержится алгоритм для поиска выпуклой оболочки." alt="" coords="48,5,239,32"/>
+<area shape="rect" id="node2" href="$tests_8cpp.html" title="Функция для генерации случайных точек." alt="" coords="9,80,128,107"/>
+<area shape="rect" id="node4" href="$server_8cpp.html" title="Основной файл сервера для вычисления выпуклой оболочки множества точек." alt="" coords="152,80,287,107"/>
+<area shape="rect" id="node3" href="$client_8cpp.html" title="Основной файл клиента для вычисления выпуклой оболочки множества точек." alt="" coords="5,155,132,181"/>
+</map>

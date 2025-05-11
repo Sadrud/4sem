@@ -1,0 +1,60 @@
+\hypertarget{tests_8cpp}{}\doxysection{Файл Tests/tests.cpp}
+\label{tests_8cpp}\index{Tests/tests.cpp@{Tests/tests.cpp}}
+
+
+Функция для генерации случайных точек.  
+
+
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Methods/main\+Method.\+cpp\char`\"{}}\newline
+{\ttfamily \#include $<$nlohmann/json.\+hpp$>$}\newline
+Граф включаемых заголовочных файлов для tests.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tests_8cpp__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{tests_8cpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+json \mbox{\hyperlink{tests_8cpp_ae2f93ab1168ae975529e1dbc16a13494}{create\+JSON}} (int size, int diapozon, std\+::vector$<$ Point $>$ $\ast$points)
+\begin{DoxyCompactList}\small\item\em Функция создает вектор случайных точек для тестирования программы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Функция для генерации случайных точек. 
+
+Этот файл содержит код, который генерирует случайные точки. 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{tests_8cpp_ae2f93ab1168ae975529e1dbc16a13494}\label{tests_8cpp_ae2f93ab1168ae975529e1dbc16a13494}} 
+\index{tests.cpp@{tests.cpp}!createJSON@{createJSON}}
+\index{createJSON@{createJSON}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{createJSON()}{createJSON()}}
+{\footnotesize\ttfamily json create\+JSON (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{diapozon,  }\item[{std\+::vector$<$ Point $>$ $\ast$}]{points }\end{DoxyParamCaption})}
+
+
+
+Функция создает вектор случайных точек для тестирования программы. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em size,diapozon,points} & Количество точек, диапазон расположения точек и указатель на массив точек. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Возвращает JSON, который будет передаваться серверу. 
+\end{DoxyReturn}
+
+
+См. определение в файле tests.\+cpp строка 20
+

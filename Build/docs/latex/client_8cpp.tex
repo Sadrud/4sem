@@ -1,0 +1,55 @@
+\hypertarget{client_8cpp}{}\doxysection{Файл Client/client.cpp}
+\label{client_8cpp}\index{Client/client.cpp@{Client/client.cpp}}
+
+
+Основной файл клиента для вычисления выпуклой оболочки множества точек.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$httplib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Tests/tests.\+cpp\char`\"{}}\newline
+Граф включаемых заголовочных файлов для client.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{client_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Основная функция тестового клиента. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Основной файл клиента для вычисления выпуклой оболочки множества точек. 
+
+Этот файл содержит реализацию HTTP-\/сервера, который отправляет наборы точек и получает их выпуклую оболочку в формате JSON. 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{client_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{client_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{client.cpp@{client.cpp}!main@{main}}
+\index{main@{main}!client.cpp@{client.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Основная функция тестового клиента. 
+
+Функция выполняет следующие действия\+:
+\begin{DoxyEnumerate}
+\item Генерирует массивы случайных чисел.
+\item Преобразует их в набор точек (каждые два числа — координаты x и y точки).
+\item Отправляет точки на сервер для вычисления выпуклой оболочки.
+\item Сохраняет исходные точки и полученнуе оболочки в файл.
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Возвращает}
+int Код завершения программы (0 в случае успешного выполнения). 
+\end{DoxyReturn}
+
+
+См. определение в файле client.\+cpp строка 27
+

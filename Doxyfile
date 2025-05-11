@@ -1,0 +1,32 @@
+PROJECT_NAME          = Geometry
+PROJECT_NUMBER        = 0.1
+OUTPUT_DIRECTORY      = Build/docs
+OUTPUT_LANGUAGE       = Russian
+HIDE_UNDOC_MEMBERS    = YES
+HIDE_UNDOC_CLASSES    = YES
+EXTRACT_PRIVATE       = YES
+SOURCE_BROWSER        = YES
+INPUT                 = Methods Tests Server Client
+INPUT_ENCODING        = UTF-8
+FILE_PATTERNS         = *.cpp *.hpp *.dox
+RECURSIVE             = YES
+ALPHABETICAL_INDEX    = YES
+COLS_IN_ALPHA_INDEX   = 3
+IGNORE_PREFIX         = Q
+ENABLE_PREPROCESSING  = YES
+MACRO_EXPANSION       = YES
+
+USE_LATEX             = YES
+EXTRA_PACKAGES        = {amsmath}, {amsfonts}
+
+USE_MATHJAX           = YES
+MATHJAX_EXTENSIONS    = TeX/AMSmath TeX/AMSsymbols
+#MATHJAX_RELPATH      = /usr/share/javascript/mathjax/
+
+QUIET                  = NO
+WARNINGS               = YES
+WARN_AS_ERROR          = NO
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = YES
+WARN_FORMAT            = "$file:$line: $text"

@@ -26,6 +26,7 @@ add_subdirectory(Includes)
 add_subdirectory(Methods)
 add_subdirectory(Server)
 add_subdirectory(Client)
+add_subdirectory(Tests)
 
 # Добавляем цель для очистки Build
 add_custom_target(clean_all
