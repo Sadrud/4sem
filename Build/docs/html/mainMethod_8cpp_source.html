@@ -93,8 +93,8 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::string filename = folder + <span class="charliteral">&#39;/&#39;</span> + file + <span class="stringliteral">&quot;.txt&quot;</span>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::ofstream out(filename);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (size != 0)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        out &lt;&lt; size &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">/*if (size != 0)</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">        out &lt;&lt; size &lt;&lt; std::endl;*/</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; val : g)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        out &lt;&lt; val.x &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; val.y &lt;&lt; std::endl;</div>

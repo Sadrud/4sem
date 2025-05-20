@@ -26,8 +26,8 @@ void printVector (std::string& folder, std::string& file, const std::vector<T>& 
 	std::string filename = folder + '/' + file + ".txt";
 	std::ofstream out(filename);
 
-	if (size != 0)
-		out << size << std::endl;
+	/*if (size != 0)
+		out << size << std::endl;*/
 
 	for (const auto& val : g)
 		out << val.x << " " << val.y << std::endl;

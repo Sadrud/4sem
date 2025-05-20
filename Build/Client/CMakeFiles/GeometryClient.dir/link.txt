@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/GeometryClient.dir/client.cpp.o -o GeometryClient  ../Includes/libGeometryComponents.a -lpthread 

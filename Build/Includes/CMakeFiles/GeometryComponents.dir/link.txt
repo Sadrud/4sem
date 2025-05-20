@@ -1,2 +1,0 @@
-/usr/bin/ar qc libGeometryComponents.a CMakeFiles/GeometryComponents.dir/Node.cpp.o CMakeFiles/GeometryComponents.dir/Edge.cpp.o CMakeFiles/GeometryComponents.dir/Point.cpp.o CMakeFiles/GeometryComponents.dir/Vertex.cpp.o CMakeFiles/GeometryComponents.dir/Polygon.cpp.o
-/usr/bin/ranlib libGeometryComponents.a
